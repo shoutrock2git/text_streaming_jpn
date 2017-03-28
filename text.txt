@@ -1,0 +1,24 @@
+
+app.py test用
+textstream.py フォーム受取、形態素解析 単語分割 listに格納
+
+template
+ index 文章の入力フォーム 送信ボタン
+ textview 文章の表示、list 順番に表示 javascript
+
+bottle　run route template request
+? redirect
+
+フォームに文章を入力
+送信ボタンをおす
+
+文章が送信される(送信元index.html→送信先textstream)
+文章を受け取る
+文章に形態素解析をかけ、品詞単位に分割する
+品詞単位で listに保存していく
+listを送信(送信元textstream → 送信先textViewer)
+
+list受取
+listのなかの単語を最初から順に表示していく
+center揃え
+for文でlistの数だけまわす

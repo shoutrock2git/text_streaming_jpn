@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <title>TextStreaming</title>
+
+
+    <script type="text/javascript">
+      msg = new Array("a", "b", "c", "d", "e");
+      //msg = new Array;
+      msg = listT;
+      timerID = 10;
+      count = 0;
+      function rndText()
+      {
+        document.myForm.myText.value = msg[count++];
+          clearTimeout(timerID);
+          if (count < msg.length) timerID = setTimeout("rndText()",500);
+      }
+    </script>
+
+</head>
+<body onLoad="rndText()">
+<div class="container">
+
+    <form name="myForm">
+    <input type="text" name="myText">
+    </form>
+
+    %for token in t.tokenize(posttext):
+      <li>{{listT}}</li>
+      <br>
+    %end
+
+</div>
+
+
+</body>
+</html>
