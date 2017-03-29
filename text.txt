@@ -18,6 +18,13 @@ bottle　run route template request
 品詞単位で listに保存していく
 listを送信(送信元textstream → 送信先textViewer)
 
+？配列の送信
+？データベースに保存してしまう
+？CSVに保存する
+　CSV作成
+　CSVにrow[0]で単語を保存
+
+
 list受取
 listのなかの単語を最初から順に表示していく
 center揃え

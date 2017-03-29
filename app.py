@@ -1,4 +1,4 @@
-from bottle import route,run,template,request
+from bottle import route,run,template,request,static_file
 from janome.tokenizer import Tokenizer
 
 
@@ -18,6 +18,13 @@ def textstream():
     for token in t.tokenize(posttext):
         listT = token.surface
 
-    return template("textview",listT=listT,posttext=posttext,t=t)
+    return template("textview",listT=listT,posttext=posttext,t=t,token=token)
+
+
+@route('/static/<file_path:path>')
+def static(file_path):
+
+    return static_file(file_path, root="./static")
+
 
 run(host='localhost', port=8080, debug=True)
