@@ -1,3 +1,4 @@
+python(bottle),javascript,html
 
 app.py test用
 textstream.py フォーム受取、形態素解析 単語分割 listに格納
